@@ -2,7 +2,7 @@ const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const audio = document.getElementById("myAudio");
 const gameOver = document.querySelector('.game-board')
-const deadSong = new Audio('./assets/mario-dead-song.mp3');
+const deadSong = new Audio('./assets/rsrs.mp3');
 const night = document.querySelector('.sol')
 
 const startGame = () => {
