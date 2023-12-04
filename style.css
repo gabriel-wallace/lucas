@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.logo-img {
+    width: 500px;
+    height: 200px;
+}
+
+.game-board {
+    width: 80%;
+    height: 500px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 5px solid green;
+    margin-top: 100px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(99,194,255,1) 100%);
+}
+
+.sol {
+    border: none;
+    width: 250px;
+    animation: clouds 20s infinite linear;
+    position: absolute;
+}
+
+.clouds {
+    border: none;
+    width: 250px;
+    animation: clouds 20s infinite linear;
+    position: absolute;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    width: 80px;
+    right: -80px;
+    animation: pipe-animation 2s infinite linear
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds {
+    from {
+        right: -250px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    
+.logo-img {
+    width: 500px;
+    margin-left: 300px;
+}
+    
+    .game-board {
+        width: 700px;
+    }
+
+    .mario {
+        width: 100px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .pipe {
+        position: absolute;
+        bottom: 0;
+        width: 50px;
+        right: -80px;
+        animation: pipe-animation 1s infinite linear
+    }
+
+    .jump {
+        animation: jump-mobile 500ms ease-out;
+    }
+
+      
+    @keyframes jump-mobile {
+        0% {
+            bottom: 0;
+        }
+    
+        40% {
+            bottom: 120px;
+        }
+    
+        50% {
+            bottom: 120px;
+        }
+    
+        60% {
+            bottom: 120px;
+        }
+    
+        100% {
+            bottom: 0;
+        }
+    }
+
+}
